@@ -11,14 +11,14 @@ try:
 except ImportError:
     import profile
 
-from benchmark_harness.utils import json_output
+from benchmark_harness.utils import format_output
 
 benchmark_parser = argparse.ArgumentParser()
 benchmark_parser.add_argument('--max-time', type=float, default=0.5)
 benchmark_parser.add_argument('--profile-file', default=None)
 
 
-@json_output
+@format_output
 def run_benchmark(benchmark, setup=None, max_time=None, handle_argv=True, meta={}):
     """
     Run a benchmark a few times and report the results.
@@ -80,7 +80,7 @@ def run_benchmark(benchmark, setup=None, max_time=None, handle_argv=True, meta={
     return {"times": times, "meta": meta}
 
 
-@json_output
+@format_output
 def run_comparison_benchmark(benchmark_a, benchmark_b, setup=None, max_time=None, handle_argv=True, meta={}):
     """
     Benchmark the difference between two functions.
