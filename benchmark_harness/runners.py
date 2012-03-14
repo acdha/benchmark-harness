@@ -32,10 +32,6 @@ def run_benchmark(benchmark, setup=None, max_time=None, handle_argv=True, meta={
             a value, that result will reported instead of the
             raw timing.
 
-        syncdb
-            If True, a syncdb will be performed before running
-            the benchmark.
-
         setup
             A function to be called before running the benchmark
             function(s).
