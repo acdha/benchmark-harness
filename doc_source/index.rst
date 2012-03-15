@@ -18,12 +18,14 @@ A simple benchmark looks like this:
 
 This script can be run directly::
 
-    $ python fib/benchmark.pyfib/benchmark.py: completed 67 trials
-    	Min: 0.007
-    	Max: 0.010
+    $ python benchmarks/fib/benchmark.py
+    fib: completed 67 trials
+    Min: 0.007
+    Max: 0.010
 
 Output can be redirected to get a full JSON record::
 
+    $ python tests/fib/benchmark.py | python -m json.tool
     {
         "meta": {
             "title": "Everyone loves fib()"
