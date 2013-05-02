@@ -1,4 +1,5 @@
 from __future__ import absolute_import
+from __future__ import print_function
 
 from functools import wraps
 import json
@@ -25,5 +26,5 @@ def format_output(f):
 
             display_stats(name, res['times'])
         else:
-            print json.dumps(res, indent=4)
+            print(json.dumps(res, indent=4))
     return inner
